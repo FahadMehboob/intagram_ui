@@ -1,11 +1,13 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:intagram_ui/signup.dart';
 
 void main() {
   runApp(const HomePage());
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +19,9 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            const SizedBox(
+              height: 50,
+            ),
             const Image(
               image: AssetImage('assets/logo.png'),
             ),
@@ -37,33 +42,37 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            const Divider(
-              thickness: 1,
-            ),
-            const SizedBox(height: 20),
-            const Align(
-              alignment: Alignment.bottomCenter,
-              child: Padding(
-                padding: EdgeInsets.only(bottom: 20),
-                child: Text.rich(
-                  TextSpan(
-                    text: 'Don’t have an account? ',
-                    style: TextStyle(
-                      fontFamily: 'Poppins-Regular',
-                      fontSize: 12,
-                      color: Colors.grey,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: 'Sign Up.',
-                        style: TextStyle(
-                          fontFamily: 'Poppins-Black',
-                          fontSize: 12,
-                          color: Color(0xff262626),
-                        ),
-                      ),
-                    ],
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 100,
+              ),
+              child: Text.rich(
+                TextSpan(
+                  text: 'Don’t have an account? ',
+                  style: const TextStyle(
+                    fontFamily: 'Poppins-Regular',
+                    fontSize: 12,
+                    color: Colors.grey,
                   ),
+                  children: [
+                    TextSpan(
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const SignUpScreen(),
+                            ),
+                          );
+                        },
+                      text: 'Sign Up.',
+                      style: const TextStyle(
+                        fontFamily: 'Poppins-Black',
+                        fontSize: 12,
+                        color: Color(0xff262626),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
