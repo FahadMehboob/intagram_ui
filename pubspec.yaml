@@ -80,6 +80,9 @@ flutter:
     - family: Poppins-Regular
       fonts:
         - asset: fonts/Poppins-Regular.ttf
+    - family: Poppins-Medium
+      fonts:
+        - asset: fonts/Poppins-Medium.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
