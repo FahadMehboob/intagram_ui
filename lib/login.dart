@@ -5,235 +5,237 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(Icons.arrow_back_ios),
-            ),
-            const SizedBox(
-              height: 200,
-            ),
-            const Center(
-              child: Image(
-                image: AssetImage('assets/logo.png'),
-                height: 150,
-                width: 300,
+    return MaterialApp(
+      home: Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.arrow_back_ios),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: TextFormField(
-                keyboardType: TextInputType.emailAddress,
-                style: const TextStyle(
-                  fontFamily: 'Poppins-Regular',
-                  fontSize: 14,
+              const SizedBox(
+                height: 200,
+              ),
+              const Center(
+                child: Image(
+                  image: AssetImage('assets/logo.png'),
+                  height: 150,
+                  width: 300,
                 ),
-                autofocus: true,
-                cursorColor: Colors.black,
-                decoration: InputDecoration(
-                  contentPadding:
-                      const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-                  fillColor: Colors.grey[200],
-                  filled: true,
-                  hintText: 'Please Enter Your Email',
-                  hintStyle: const TextStyle(
-                    color: Colors.grey,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: TextFormField(
+                  keyboardType: TextInputType.emailAddress,
+                  style: const TextStyle(
                     fontFamily: 'Poppins-Regular',
                     fontSize: 14,
                   ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    borderSide: BorderSide(
-                        color: Colors.grey[200]!), // Set the border color
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    borderSide: BorderSide(
-                        color: Colors.grey[200]!), // Set the border color
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    borderSide: BorderSide(
-                        color: Colors.grey[200]!), // Set the border color
+                  autofocus: true,
+                  cursorColor: Colors.black,
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.symmetric(
+                        vertical: 12, horizontal: 16),
+                    fillColor: Colors.grey[200],
+                    filled: true,
+                    hintText: 'Please Enter Your Email',
+                    hintStyle: const TextStyle(
+                      color: Colors.grey,
+                      fontFamily: 'Poppins-Regular',
+                      fontSize: 14,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                          color: Colors.grey[200]!), // Set the border color
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                          color: Colors.grey[200]!), // Set the border color
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                          color: Colors.grey[200]!), // Set the border color
+                    ),
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 20,
-                right: 20,
-                top: 2,
-              ),
-              child: TextFormField(
-                keyboardType: TextInputType.visiblePassword,
-                obscureText: true,
-                style: const TextStyle(
-                  fontFamily: 'Poppins-Regular',
-                  fontSize: 14,
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                  top: 2,
                 ),
-                cursorColor: Colors.black,
-                decoration: InputDecoration(
-                  contentPadding:
-                      const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-                  fillColor: Colors.grey[200],
-                  filled: true,
-                  hintText: 'Please Enter Your Password',
-                  hintStyle: const TextStyle(
-                    color: Colors.grey,
+                child: TextFormField(
+                  keyboardType: TextInputType.visiblePassword,
+                  obscureText: true,
+                  style: const TextStyle(
                     fontFamily: 'Poppins-Regular',
                     fontSize: 14,
                   ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    borderSide: BorderSide(
-                        color: Colors.grey[200]!), // Set the border color
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    borderSide: BorderSide(
-                        color: Colors.grey[200]!), // Set the border color
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    borderSide: BorderSide(
-                        color: Colors.grey[200]!), // Set the border color
+                  cursorColor: Colors.black,
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.symmetric(
+                        vertical: 12, horizontal: 16),
+                    fillColor: Colors.grey[200],
+                    filled: true,
+                    hintText: 'Please Enter Your Password',
+                    hintStyle: const TextStyle(
+                      color: Colors.grey,
+                      fontFamily: 'Poppins-Regular',
+                      fontSize: 14,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                          color: Colors.grey[200]!), // Set the border color
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                          color: Colors.grey[200]!), // Set the border color
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                          color: Colors.grey[200]!), // Set the border color
+                    ),
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 10, right: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: const [
-                  Text(
-                    "Forgot Password?",
-                    style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      fontFamily: "Poppins-Medium",
-                      fontSize: 12,
+              Padding(
+                padding: const EdgeInsets.only(top: 10, right: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: const [
+                    Text(
+                      "Forgot Password?",
+                      style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        fontFamily: "Poppins-Medium",
+                        fontSize: 12,
+                        color: Color(0xff3797EF),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/homescreen');
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                  child: Center(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color(0xff3797EF),
+                      ),
+                      alignment: Alignment.center,
+                      height: 45,
+                      width: 370,
+                      child: const Text(
+                        'Login',
+                        style: TextStyle(
+                          color: Color(0XffFFFFFF),
+                          fontFamily: 'Poppins-Black',
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(
+                      Icons.facebook,
                       color: Color(0xff3797EF),
                     ),
-                  ),
-                ],
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/login');
-              },
-              child: Padding(
-                padding: const EdgeInsets.only(top: 30),
-                child: Center(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: const Color(0xff3797EF),
-                    ),
-                    alignment: Alignment.center,
-                    height: 45,
-                    width: 370,
-                    child: const Text(
-                      'Login',
+                    Text(
+                      "Log in with Facebook",
                       style: TextStyle(
-                        color: Color(0XffFFFFFF),
-                        fontFamily: 'Poppins-Black',
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
+                          color: Color(
+                            0xff3797EF,
+                          ),
+                          fontFamily: "Poppins-Black",
+                          fontSize: 14),
+                    )
+                  ],
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 30),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Icon(
-                    Icons.facebook,
-                    color: Color(0xff3797EF),
-                  ),
-                  Text(
-                    "Log in with Facebook",
-                    style: TextStyle(
-                        color: Color(
-                          0xff3797EF,
-                        ),
-                        fontFamily: "Poppins-Black",
-                        fontSize: 14),
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 40, bottom: 20),
-              child: Row(
-                children: const [
-                  Expanded(
-                    child: Divider(
-                      thickness: 1,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 12),
-                    child: Text(
-                      "OR",
-                      style: TextStyle(
-                          fontSize: 12,
-                          fontFamily: "Poppins-Black",
-                          color: Colors.grey),
-                    ),
-                  ),
-                  Expanded(
-                    child: Divider(
-                      thickness: 1,
-                      color: Colors.grey,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/signup');
-              },
-              child: const Padding(
-                padding: EdgeInsets.only(top: 20),
-                child: Center(
-                  child: Text.rich(
-                    TextSpan(
-                      text: 'Don’t have an account? ',
-                      style: TextStyle(
-                        fontFamily: 'Poppins-Regular',
-                        fontSize: 14,
+              Padding(
+                padding: const EdgeInsets.only(top: 40, bottom: 20),
+                child: Row(
+                  children: const [
+                    Expanded(
+                      child: Divider(
+                        thickness: 1,
                         color: Colors.grey,
                       ),
-                      children: [
-                        TextSpan(
-                          text: 'Sign Up',
-                          style: TextStyle(
-                            fontFamily: 'Poppins-Black',
-                            fontSize: 14,
-                            color: Color(0xff3797EF),
-                          ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 12),
+                      child: Text(
+                        "OR",
+                        style: TextStyle(
+                            fontSize: 12,
+                            fontFamily: "Poppins-Black",
+                            color: Colors.grey),
+                      ),
+                    ),
+                    Expanded(
+                      child: Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/signup');
+                },
+                child: const Padding(
+                  padding: EdgeInsets.only(top: 20),
+                  child: Center(
+                    child: Text.rich(
+                      TextSpan(
+                        text: 'Don’t have an account? ',
+                        style: TextStyle(
+                          fontFamily: 'Poppins-Regular',
+                          fontSize: 14,
+                          color: Colors.grey,
                         ),
-                      ],
+                        children: [
+                          TextSpan(
+                            text: 'Sign Up',
+                            style: TextStyle(
+                              fontFamily: 'Poppins-Black',
+                              fontSize: 14,
+                              color: Color(0xff3797EF),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

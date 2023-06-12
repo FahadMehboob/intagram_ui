@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:intagram_ui/login.dart';
 import 'package:intagram_ui/signup.dart';
 
+import 'homescreen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => const LoginScreen(),
         '/signup': (context) => const SignUpScreen(),
+        '/homescreen': (context) => const HomeScreen(),
       },
     );
   }
