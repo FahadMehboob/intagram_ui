@@ -51,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                   color: Color(0xff262626),
                 ),
                 onPressed: () {
-                  // Handle notifications button press
+                  Navigator.pushNamed(context, '/notification');
                 },
               ),
               IconButton(
