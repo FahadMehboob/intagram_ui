@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intagram_ui/profilescreen.dart';
 import 'login.dart';
 import 'searchscreen.dart';
 import 'signup.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/homescreen': (context) => const HomeScreen(),
         '/searchscreen': (context) => SearchScreen(),
         '/notification': (context) => const NotifyBell(),
+        '/profilescreen': (context) => const ProfileScreen(),
       },
     );
   }

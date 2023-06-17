@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String id = "homescreen";
   const HomeScreen({super.key});
 
   @override
@@ -21,7 +22,7 @@ class HomeScreen extends StatelessWidget {
                   color: Color(0xff262626),
                 ),
                 onPressed: () {
-                  // Handle home button press
+                  Navigator.pushNamed(context, '/homescreen');
                 },
               ),
               IconButton(
@@ -61,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                   color: Color(0xff262626),
                 ),
                 onPressed: () {
-                  // Handle profile button press
+                  Navigator.pushNamed(context, '/profilescreen');
                 },
               ),
             ],
@@ -130,7 +131,7 @@ class HomeScreen extends StatelessWidget {
                             child: CircleAvatar(
                               backgroundImage: index == 0
                                   ? const NetworkImage(
-                                      'https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg',
+                                      'https://images.pexels.com/photos/2787341/pexels-photo-2787341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                                     )
                                   : const NetworkImage(
                                       'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=300',
@@ -272,7 +273,7 @@ class HomeScreen extends StatelessWidget {
               const ListTile(
                 leading: CircleAvatar(
                   backgroundImage: NetworkImage(
-                      'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg'),
+                      'https://images.pexels.com/photos/371985/pexels-photo-371985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
                   radius: 30,
                 ),
                 title: Text(

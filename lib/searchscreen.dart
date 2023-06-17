@@ -79,7 +79,7 @@ class SearchScreen extends StatelessWidget {
                 color: Color(0xff262626),
               ),
               onPressed: () {
-                // Handle profile button press
+                Navigator.pushNamed(context, '/profilescreen');
               },
             ),
           ],
